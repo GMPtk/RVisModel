@@ -1,0 +1,16 @@
+Integrate (Lsodes, 1e-6, 1e-6, 1);
+
+Simulation {
+
+  BDW   = {{BDW}};
+  height= {{height}};
+  Sex   = {{Sex}};
+  Age   = {{Age}};
+
+  C_inh = NDoses (2, {{doseC1}}, {{doseT1}}, {{doseC2}}, {{doseT2}});
+
+  PrintStep(C_exh, {{Tstart}}, {{Tend}}, {{Tint}});
+  PrintStep(C_art, {{Tstart}}, {{Tend}}, {{Tint}});
+  PrintStep(C_ven, {{Tstart}}, {{Tend}}, {{Tint}});
+
+}
